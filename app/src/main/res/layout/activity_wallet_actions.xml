@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- NB: Wrapped in RelativeLayout to enable the 'big green success tick' -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_simple_toolbar" />
+
+        <include layout="@layout/item_wallet_manage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mercury" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/alabaster" />
+
+            <LinearLayout
+                android:id="@+id/layout_backup_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mercury" />
+
+                <com.alphawallet.app.widget.SettingsItemView
+                    android:id="@+id/setting_backup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:settingIcon="@drawable/ic_settings_show_seed"
+                    app:settingTitle="@string/show_seed_phrase"
+                    app:settingType="default" />
+
+                <TextView
+                    android:id="@+id/backup_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="51dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/seed_phrase_loss_warning"
+                    android:textColor="@color/hftc_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mercury" />
+
+            <!-- Modified by HFT -->
+            <com.alphawallet.app.widget.SettingsItemView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:settingIcon="@drawable/ic_settings_lose_wallet"
+                app:settingTitle="@string/lose_this_wallet"
+                app:settingType="default"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="51dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/delete_lose_funds_warning"
+                android:textColor="@color/hftc_grey"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <com.alphawallet.app.widget.InputAddress
+                android:id="@+id/input_ens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                custom:hint="@string/enter_ens"
+                custom:label="@string/ens_name"
+                custom:ens="true"
+                custom:nocam="true"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mercury"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_success_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blur"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:background="@drawable/big_green_tick"
+            android:foregroundGravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

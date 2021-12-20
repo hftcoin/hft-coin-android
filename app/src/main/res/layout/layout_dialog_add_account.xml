@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/close_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/font_semibold"
+            android:text="@string/title_dialog_add_account"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mercury"/>
+
+    <TextView
+        android:id="@+id/new_account_action"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/font_regular"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="15dp"
+        android:text="@string/action_create_new_account"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/mercury"/>
+
+    <TextView
+        android:id="@+id/import_account_action"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/font_regular"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="15dp"
+        android:text="@string/title_import"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible" /> <!-- Modified by HFT -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/mercury"
+        android:visibility="gone"/> <!-- Modified by HFT -->
+
+    <TextView
+        android:id="@+id/watch_account_action"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/font_regular"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="15dp"
+        android:text="@string/action_watch_account"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="gone"/> <!-- Modified by HFT -->
+
+</LinearLayout>
+
+

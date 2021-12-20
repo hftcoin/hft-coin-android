@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyffive"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_certified_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/layout_eth_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greyffive"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible">
+
+        <com.alphawallet.app.widget.FunctionButtonBar
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/allz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@id/layoutButtons">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/token_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:visibility="gone"/> <!-- Modified by HFT -->
+
+            <com.alphawallet.app.widget.ActivityHistoryList
+                android:id="@+id/history_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

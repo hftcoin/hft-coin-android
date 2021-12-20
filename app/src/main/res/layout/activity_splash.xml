@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_new_wallet"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/splash_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_launcher"
+            android:gravity="center_horizontal"
+            android:visibility="gone" /> <!-- Modified by HFT -->
+
+        <TextView
+            android:id="@+id/splash_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/hftc"
+            android:textSize="26sp"
+            android:visibility="visible" /> <!-- Modified by HFT -->
+
+        <!-- Added by HFT -->
+        <TextView
+            android:id="@+id/splash_slogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal"
+            android:text="@string/slogan"
+            android:textColor="@color/hftc_grey"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_new_wallet"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_round_button"
+            android:layout_marginBottom="@dimen/create_new_wallet_margin_bottom"
+            android:text="@string/create_a_new_wallet"
+            android:elevation="2dp"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/divider_margin_top"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_bar"
+            android:visibility="gone"/> <!-- Modified by HFT -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/already_label_margin_top"
+            android:text="@string/already_have_a_wallet"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/> <!-- Modified by HFT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/bottom_buttons_holder_margin_bottom">
+
+            <Button
+                android:id="@+id/button_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/watch"
+                android:layout_weight="1.0"
+                android:background="@drawable/background_white_button"
+                android:elevation="2dp"
+                android:layout_marginEnd="4dp"
+                android:padding="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/tealish"
+                android:visibility="gone"/> <!-- Modified by HFT -->
+
+            <Button
+                android:id="@+id/button_import"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_import"
+                android:layout_weight="1.0"
+                android:background="@drawable/background_white_button"
+                android:elevation="2dp"
+                android:layout_marginStart="4dp"
+                android:padding="2dp"
+                android:textAllCaps="true"
+                android:textColor="@color/hftc"
+                android:visibility="gone"/> <!-- Modified by HFT -->
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

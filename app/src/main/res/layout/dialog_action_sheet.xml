@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp">
+
+        <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp16"
+            android:background="@color/transparent"
+            android:contentDescription="@string/action_close"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/font_semibold"
+            android:gravity="center_horizontal"
+            android:text="@string/confirm_transaction"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp20" />
+
+        <!-- Modified by HFT -->
+        <!-- android:src="@mipmap/ic_launcher_foreground" -->
+        <ImageView
+            android:id="@+id/logo"
+            android:contentDescription="@string/app_name"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@color/mercury" />
+
+    </RelativeLayout>
+
+    <com.alphawallet.app.widget.BalanceDisplayWidget
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.alphawallet.app.widget.AddressDetailView
+        android:id="@+id/requester"
+        android:visibility="gone"
+        custom:label="@string/requester_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.alphawallet.app.widget.GasWidget
+        android:id="@+id/gas_widgetx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/> <!-- Modified by HFT -->
+
+    <com.alphawallet.app.widget.TransactionDetailWidget
+        android:id="@+id/detail_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.alphawallet.app.widget.AmountDisplayWidget
+        android:id="@+id/amount_display"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    <com.alphawallet.app.widget.AddressDetailView
+        android:id="@+id/recipient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.alphawallet.app.widget.AssetDetailView
+        android:id="@+id/asset_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mercury"
+        android:visibility="gone"/>  <!-- Modified by HFT -->
+
+    <com.alphawallet.app.widget.ConfirmationWidget
+        android:id="@+id/confirmation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.alphawallet.app.widget.FunctionButtonBar
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
